@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brotherhood</title>
+    <link rel="stylesheet" href="lightbox.min.css">
+    <script src="lightbox-plus-jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="logo0.png">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/93df447214.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .lb-caption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px !important;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(v60.png);
+            background-size: cover;
+            position: relative;
+            background-repeat: no-repeat;
+        }
+
+        header button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-62%, 385%);
+            padding: 10px 0px;
+            border: none;
+            background-color: peru;
+        }
+
+        header button a {
+            text-decoration: none;
+            color: black;
+            font-size: 50px;
+            font-family: 'Do Hyeon', sans-serif;
+            padding: 10px 50px;
+            transition: .3s;
+        }
+
+        header button a:hover {
+            color: yellow;
+        }
+
+        .first {
+            width: 100vw;
+            height: 80vh;
+            background-image: url(discordbgc.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .first div {
+            font-size: 28px;
+            color: white;
+            font-family: 'Do Hyeon', sans-serif;
+            text-align: center;
+        }
+
+        i {
+            margin-right: 15px;
+        }
+
+        .first h2 {
+            font-size: 50px;
+            background-color: transparent;
+        }
+
+        .second div {
+            width: 100vw;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Do Hyeon', sans-serif;
+            text-align: center;
+            background-size: cover;
+            flex-direction: column;
+            color: white;
+        }
+
+        .second p {
+            background-color: black;
+        }
+
+        .second h2 {
+            letter-spacing: 1px;
+            margin-bottom: 10vw;
+            font-weight: bold;
+            font-size: 80px;
+            color: black;
+            background-color: white;
+        }
+
+        .second div:nth-child(1) {
+            background-image: url(ark.jpg);
+        }
+
+        .second div:nth-child(2) {
+            background-image: url(minecraft.png);
+        }
+
+        .second div:nth-child(3) {
+            background-image: url(conan2.jpg);
+        }
+
+        .second div:nth-child(4) {
+            background-image: url(question-mark.jpg);
+        }
+
+        .second div:nth-child(4) h2 {
+            margin-bottom: 30vh;
+        }
+
+        .second div:nth-child(4) p {
+            margin-bottom: 15vh;
+        }
+
+        .third {
+            width: 100vw;
+            height: 75vh;
+            text-align: center;
+            background-image: url(eventbgc.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        aside {
+            background-color: #000;
+        }
+
+        aside h2 {
+            text-align: center;
+            font-size: 100px;
+            font-family: 'Do Hyeon', sans-serif;
+            color: white;
+            background-color: black;
+
+        }
+
+        main h2 {
+            text-align: center;
+            font-size: 60px;
+            background-color: white;
+            font-family: 'Do Hyeon', sans-serif;
+            color: black;
+        }
+
+        main div {
+            background-image: url(christmasevent.jpg);
+            background-size: cover;
+            width: 30vw;
+            height: 35vh;
+            background-position: center center;
+            margin: 20px 0;
+        }
+
+        main p {
+            font-size: 22px;
+            font-family: 'Do Hyeon', sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        .one {
+            color: yellowgreen;
+        }
+
+        .two {
+            color: yellow;
+        }
+
+        .three {
+            color: white;
+        }
+
+        main {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .fourth {
+            height: 100vh;
+            width: 100vw;
+            background-image: url(arkattraction02.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .fourthtwo {
+            background-image: url(secretlake.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .fourththree {
+            background-image: url(conanattraction02.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .fourthfourth {
+            background-image: url(beach.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        article {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+            height: 50vh;
+            width: 100vw;
+        }
+
+        article div {
+            width: 32%;
+            height: 58%;
+            background-image: url(brown.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 90px;
+            font-family: 'Do Hyeon', sans-serif;
+            font-weight: bold;
+            background-color: white;
+            text-align: center;
+        }
+
+        article p {
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Do Hyeon', sans-serif;
+            color: white;
+            background-color: black;
+        }
+
+        .gallery {
+            margin: 10px 50px;
+        }
+
+        .gallery img {
+            transition: .5s;
+            padding: 15px;
+            width: 430px;
+            height: 300px;
+        }
+
+        .gallery img:hover {
+            filter: grayscale(100%);
+            transform: scale(1.1);
+        }
+
+        .second button {
+            padding: 15px 0px;
+            background-color: transparent;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .second button a {
+            font-family: 'Do Hyeon', sans-serif;
+            padding: 15px 55px;
+            text-decoration: none;
+            color: black;
+            background-color: #EF9F26;
+            font-size: 30px;
+        }
+
+        .second button a:hover {
+
+            color: #E7E84F;
+
+        }
+
+
+
+
+
+        @media (max-width: 1366px) {
+            header {
+                background-image: url(mobile30.png);
+                background-position-x: -0vw;
+            }
+
+            header button {
+                transform: translate(-60%, 300%);
+            }
+
+            header button a {
+                padding: 10px 35px;
+            }
+
+            .first {
+                /* flex-direction: column; */
+                height: 120vh;
+            }
+
+            .first h2 {
+                font-size: 40px;
+            }
+
+            .first div {
+                font-size: 25px;
+                color: white;
+                font-family: 'Do Hyeon', sans-serif;
+                text-align: center;
+            }
+
+            i {
+                margin-right: 15px;
+            }
+
+            .third {
+
+                height: 110vh;
+            }
+
+            article p {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            header {
+                background-position-x: -5vw;
+            }
+
+            article p {
+                font-size: 18px;
+            }
+
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                background-position-x: -67vw;
+            }
+
+            header button {
+                transform: translate(-51%, 460%);
+            }
+
+            header button a {
+                padding: 10px 35px;
+            }
+
+            .first {
+                flex-direction: column;
+                height: 120vh;
+            }
+
+            .first h2 {
+                font-size: 40px;
+            }
+
+            .first div {
+                font-size: 30px;
+                color: white;
+                font-family: 'Do Hyeon', sans-serif;
+                text-align: center;
+            }
+
+            i {
+                margin-right: 15px;
+            }
+
+            article p {
+                font-size: 18px;
+            }
+
+            article div {
+                width: 38%;
+                height: 55%;
+            }
+
+            .gallery img {
+                transition: .5s;
+                padding: 15px;
+                width: 330px;
+                height: 230px;
+            }
+        }
+
+        @media (max-width: 460px) {
+            header {
+                background-position-x: -102vw;
+            }
+
+            header button {
+                transform: translate(-49%, 300%);
+            }
+
+            header button a {
+                padding: 10px 35px;
+            }
+
+            .first {
+                flex-direction: column;
+                height: 120vh;
+            }
+
+            .first h2 {
+                font-size: 30px;
+            }
+
+            .first div {
+                font-size: 20px;
+                color: white;
+                font-family: 'Do Hyeon', sans-serif;
+                text-align: center;
+            }
+
+            i {
+                margin-right: 10px;
+            }
+
+            .second p {
+                font-size: 17px;
+            }
+
+            .second h2 {
+                letter-spacing: 1px;
+                margin-bottom: 5vw;
+                font-size: 38px;
+
+            }
+
+            aside h2 {
+                text-align: center;
+                font-size: 50px;
+                font-family: 'Do Hyeon', sans-serif;
+            }
+
+            .third {
+                flex-direction: column;
+                height: 180vh;
+            }
+
+            main div {
+                width: 60vw;
+                height: 20vh;
+            }
+
+            main p {
+                font-size: 17px;
+            }
+
+            main h2 {
+                font-size: 28px;
+            }
+
+            article {
+                flex-direction: column;
+            }
+
+            article p {
+                font-size: 15px;
+            }
+
+            article div {
+                width: 80%;
+                height: 45%;
+            }
+
+            h2 {
+                font-size: 60px;
+            }
+
+            .gallery img {
+                transition: .5s;
+                padding: 15px;
+                width: 380px;
+                height: 230px;
+            }
+
+            .gallery {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 375px) {
+            header {
+                background-position-x: -139vw;
+            }
+
+            header button {
+                transform: translate(-54%, 300%);
+            }
+
+            header button a {
+                padding: 8px 25px;
+            }
+
+            .first {
+                flex-direction: column;
+                height: 120vh;
+            }
+
+            .first h2 {
+                font-size: 30px;
+            }
+
+            .first div {
+                font-size: 20px;
+                color: white;
+                font-family: 'Do Hyeon', sans-serif;
+                text-align: center;
+            }
+
+            i {
+                margin-right: 10px;
+            }
+
+            .second p {
+                font-size: 16px;
+            }
+
+            .second h2 {
+                letter-spacing: 1px;
+                margin-bottom: 5vw;
+                font-size: 36px;
+
+            }
+
+            aside h2 {
+                text-align: center;
+                font-size: 50px;
+                font-family: 'Do Hyeon', sans-serif;
+            }
+
+            .third {
+                flex-direction: column;
+                height: 160vh;
+            }
+
+
+            main div {
+                width: 50vw;
+                height: 20vh;
+            }
+
+            main p {
+                font-size: 15px;
+            }
+
+            main h2 {
+                font-size: 32px;
+            }
+
+            .gallery img {
+                transition: .5s;
+                padding: 15px;
+                width: 350px;
+                height: 210px;
+            }
+
+            .gallery {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+
+        @media (max-width: 360px) {
+            header {
+                background-position-x: -103vw;
+            }
+
+            header button {
+                transform: translate(-50%, 250%);
+            }
+
+            header button a {
+                padding: 10px 35px;
+            }
+
+            .first {
+                flex-direction: column;
+                height: 120vh;
+            }
+
+            .first h2 {
+                font-size: 25px;
+            }
+
+            .first div {
+                font-size: 15px;
+                color: white;
+                font-family: 'Do Hyeon', sans-serif;
+                text-align: center;
+            }
+
+            i {
+                margin-right: 10px;
+            }
+
+            .second p {
+                font-size: 13px;
+            }
+
+            .second h2 {
+                letter-spacing: 1px;
+                margin-bottom: 5vw;
+                font-size: 32px;
+
+            }
+
+            aside h2 {
+                text-align: center;
+                font-size: 50px;
+                font-family: 'Do Hyeon', sans-serif;
+            }
+
+            .third {
+                flex-direction: column;
+                height: 200vh;
+            }
+
+            main div {
+                width: 50vw;
+                height: 20vh;
+            }
+
+            main h2 {
+                font-size: 30px;
+                margin: 10px 0;
+            }
+
+            main p {
+                font-size: 16px;
+            }
+
+            article div p {
+                font-size: 13px;
+            }
+
+            aside div {
+                width: 85%;
+            }
+
+            .gallery img {
+                transition: .5s;
+                padding: 15px;
+                width: 320px;
+                height: 200px;
+            }
+
+            .gallery {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        header {
+            background-position: center center;
+        }
+
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            height: 5vh;
+            background-color: #ddd;
+            font-weight: bold;
+            text-align: center;
+            line-height: 5vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button><a href="https://discord.gg/Cbmyzxn">Join us</a></button>
+    </header>
+    <section class="first">
+        <div>
+            <h2><i class="fas fa-users"></i>Who we are?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente vitae similique, praesentium
+                nesciunt quam saepe obcaecati mollitia veniam ut magnam deserunt ipsa consequatur blanditiis veritatis
+                debitis eaque placeat adipisci.</p>
+        </div>
+        <div>
+            <h2><i class="fas fa-gamepad"></i>What we offer?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente vitae similique, praesentium
+                nesciunt quam saepe obcaecati mollitia veniam ut magnam deserunt ipsa consequatur blanditiis veritatis
+                debitis eaque placeat adipisci.</p>
+        </div>
+        <div>
+            <h2><i class="fab fa-discord"></i>Why our server?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente vitae similique, praesentium
+                nesciunt quam saepe obcaecati mollitia veniam ut magnam deserunt ipsa consequatur blanditiis veritatis
+                debitis eaque placeat adipisci.</p>
+        </div>
+    </section>
+    <section class="second">
+        <div>
+            <h2>Ark: Survival Evolved</h2>
+            <p>As a man or woman stranded naked, freezing and starving on the shores of a mysterious island called ARK,
+                you must hunt, harvest resources, craft items, grow crops, research technologies, and build shelters to
+                withstand the elements. Use your cunning and resources to kill or tame & breed the leviathan dinosaurs
+                and other primeval creatures roaming the land, and team up with or prey on hundreds of other players to
+                survive, dominate... and escape!</p>
+            <button><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1809493732">Mods</a></button>
+        </div>
+        <div>
+            <h2>Minecraft</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente vitae similique, praesentium
+                nesciunt quam saepe obcaecati mollitia veniam ut magnam deserunt ipsa consequatur blanditiis veritatis
+                debitis eaque placeat adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores
+                veniam minima consequuntur quam praesentium suscipit a tenetur, ipsum animi numquam delectus illum,
+                corporis, blanditiis hic alias esse? Quis perferendis explicabo error labore eum neque dignissimos sunt
+                nam dicta, voluptate harum facere optio excepturi mollitia odit provident sapiente sit distinctio?</p>
+        </div>
+        <div>
+            <h2>Conan Exiles</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sapiente vitae similique, praesentium
+                nesciunt quam saepe obcaecati mollitia veniam ut magnam deserunt ipsa consequatur blanditiis veritatis
+                debitis eaque placeat adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores
+                veniam minima consequuntur quam praesentium suscipit a tenetur, ipsum animi numquam delectus illum,
+                corporis, blanditiis hic alias esse? Quis perferendis explicabo error labore eum neque dignissimos sunt
+                nam dicta, voluptate harum facere optio excepturi mollitia odit provident sapiente sit distinctio?</p>
+            <button><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2159307644">Mods</a></button>
+        </div>
+        <div>
+            <h2>Game server coming soon</h2>
+            <p>???</p>
+    </section>
+    <aside>
+        <h2>Server Events</h2>
+        <section class="third">
+
+            <main>
+                <h2>Current Event</h2>
+                <div></div>
+                <p class="one"> <b>Christmas gaming event!!!</b> <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In saepe voluptate quaerat itaque tenetur.
+                    Quam
+                    esse alias nihil maiores ut earum beatae adipisci sequi neque! Reprehenderit harum facere commodi
+                    nesciunt nobis. Quisquam culpa illo praesentium voluptatem expedita velit assumenda atque excepturi
+                    eos,
+                    impedit suscipit accusamus quas repudiandae consequuntur. Expedita, ducimus! </p>
+            </main>
+            <main>
+                <h2>Seasonal Event</h2>
+                <div></div>
+                <p class="two"> <b>Christmas gaming event!!!</b> <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In saepe voluptate quaerat itaque tenetur.
+                    Quam
+                    esse alias nihil maiores ut earum beatae adipisci sequi neque! Reprehenderit harum facere commodi
+                    nesciunt nobis. Quisquam culpa illo praesentium voluptatem expedita velit assumenda atque excepturi
+                    eos,
+                    impedit suscipit accusamus quas repudiandae consequuntur. Expedita, ducimus! </p>
+            </main>
+            <main>
+                <h2>Classic Event</h2>
+                <div></div>
+                <p class="three"> <b>Christmas gaming event!!!</b> <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In saepe voluptate quaerat itaque tenetur.
+                    Quam
+                    esse alias nihil maiores ut earum beatae adipisci sequi neque! Reprehenderit harum facere commodi
+                    nesciunt nobis. Quisquam culpa illo praesentium voluptatem expedita velit assumenda atque excepturi
+                    eos,
+                    impedit suscipit accusamus quas repudiandae consequuntur. Expedita, ducimus! </p>
+            </main>
+        </section>
+    </aside>
+    <h2>Attractions</h2>
+    <section class="fourth">
+        <article>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+        </article>
+    </section>
+    <section class="fourth fourthtwo">
+        <article>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+        </article>
+    </section>
+    <section class="fourth fourththree">
+        <article>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus veritatis accusamus
+                    exercitationem modi fugiat perspiciatis neque cum odio dolorem aliquam praesentium ullam consequatur
+                    est, earum ad nam quaerat nesciunt necessitatibus nulla eaque. Aliquam tenetur adipisci tempore
+                    iure. Doloribus, labore molestias.</p>
+            </div>
+        </article>
+        <section class="fourth fourthfourth">
+            <article>
+                <div>
+                    <p>???</p>
+                </div>
+                <div>
+                    <p>???</p>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <p>???</p>
+                </div>
+                <div>
+                    <p>???</p>
+                </div>
+            </article>
+        </section>
+        <div class="gallery">
+            <h2>Gallery</h2>
+            <a href="images/sunforest.jpg" data-lightbox="mygallery" data-title="Sunforest"><img
+                    src="images/sunforest-small.jpg" alt=""></a>
+            <a href="images/mountains.jpg" data-lightbox="mygallery" data-title="Mountains"><img
+                    src="images/mountains-small.jpg" alt=""></a>
+            <a href="images/road.jpg" data-lightbox="mygallery" data-title="Road"><img src="images/road-small.jpg"
+                    alt=""></a>
+            <a href="images/moon.jpg" data-lightbox="mygallery" data-title="Moon"><img src="images/moon-small.jpg"
+                    alt=""></a>
+            <a href="images/sunforest.jpg" data-lightbox="mygallery" data-title="Sunforest"><img
+                    src="images/sunforest-small.jpg" alt=""></a>
+            <a href="images/mountains.jpg" data-lightbox="mygallery" data-title="Mountains"><img
+                    src="images/mountains-small.jpg" alt=""></a>
+            <a href="images/road.jpg" data-lightbox="mygallery" data-title="Road"><img src="images/road-small.jpg"
+                    alt=""></a>
+            <a href="images/moon.jpg" data-lightbox="mygallery" data-title="Moon"><img src="images/moon-small.jpg"
+                    alt=""></a>
+            <a href="images/sunforest.jpg" data-lightbox="mygallery" data-title="Sunforest"><img
+                    src="images/sunforest-small.jpg" alt=""></a>
+            <a href="images/mountains.jpg" data-lightbox="mygallery" data-title="Mountains"><img
+                    src="images/mountains-small.jpg" alt=""></a>
+            <a href="images/road.jpg" data-lightbox="mygallery" data-title="Road"><img src="images/road-small.jpg"
+                    alt=""></a>
+            <a href="images/moon.jpg" data-lightbox="mygallery" data-title="Moon"><img src="images/moon-small.jpg"
+                    alt=""></a>
+            <a href="images/sunforest.jpg" data-lightbox="mygallery" data-title="Sunforest"><img
+                    src="images/sunforest-small.jpg" alt=""></a>
+            <a href="images/mountains.jpg" data-lightbox="mygallery" data-title="Mountains"><img
+                    src="images/mountains-small.jpg" alt=""></a>
+            <a href="images/road.jpg" data-lightbox="mygallery" data-title="Road"><img src="images/road-small.jpg"
+                    alt=""></a>
+            <a href="images/moon.jpg" data-lightbox="mygallery" data-title="Moon"><img src="images/moon-small.jpg"
+                    alt=""></a>
+        </div>
+        <footer>Raovake &copy;</footer>
+</body>
+
+</html>
